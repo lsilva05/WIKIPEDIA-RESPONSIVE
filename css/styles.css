@@ -1,0 +1,104 @@
+/* =================================
+Using percentages, ems, and other fun things
+
+
+LAYOUT -
+===================================*/
+
+.container {
+	background: yellow;
+	margin: 0 auto;
+	width: 100%/* 960px | 96 seems to be "in" right now */;
+	max-width: 96% /*make it the same!*/;
+
+}
+
+nav{
+	width: 100%; /* 960/960 container = 100% */
+	background: #0F0;
+}
+
+
+aside, article{
+	float: left;
+}
+
+aside {
+	width: 33.3333333333333333%; /*320/960= 33.3333..%*/
+	background: orange;
+}
+
+article{
+	width: 66.666666666666666666%; /*you know the drill*/
+	background: lightblue;
+}
+
+/* !!- the footer must use clear so it doesn't collapse*/
+footer{
+	clear: both;
+	background: red;	
+}
+
+
+/*=======
+TYPOGRAPHY
+=========*/
+
+h1{
+	font-size: 3em; /*target/context=result | 48px/16px= 3EM  |  */
+}
+
+h2{
+	font-size: 2em; /*  32px / 16 = 2em  */	
+}
+
+h3{
+	font-size: 1.1em;
+}
+
+p{
+	font-size: 1.25em; /* 20px / 16px = 1.25em*/
+
+}
+
+a{
+	font-size: 1em; /* 20px / 20px = 1em*/	
+}
+
+
+/*===================
+MOBILE
+********************/
+
+@media screen and (max-width: 460px){
+	background {
+			background: blue;
+	}
+	
+	article{
+		float: none;
+		width: 100%;
+	}
+	
+	aside{
+		float: none;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 720px){
+	background {
+			background: blue;
+	}
+	
+	article{
+		float: none;
+		width: 100%;
+	}
+	
+	aside{
+		float: none;
+		width: 100%;
+	}
+}
+/*end of mobile*/
